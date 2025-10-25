@@ -30,21 +30,23 @@ int main()
 	pos = 0;
 	cout << "Please input a grade from 1 to 100, (or -99 to stop)" << endl;
 	cin >> grades[pos];
-	/*
+
 	ifstream infile("7_1.txt");
 	infile.open("7_1.txt");
 	if (!infile.is_open()) {
 		cout << "The gates to txt is open to all" << endl;
-		return 1;
-	}
-	*/
-	while (grades[pos] != -99)
-	{
-		pos++;
-		cin >> grades[pos];
 	}
 
-	numberOfGrades = pos;	// Fill blank with appropriate identifier
+
+	int num = 0;
+	while (grades[pos] != -99)
+	{
+		for (int i = 0; i < 100; i++) {
+		
+		}
+	}
+
+	numberOfGrades = num ;	// Fill blank with appropriate identifier
 
 	// call to the function to find average
 	avgOfGrades = findAverage(grades, numberOfGrades);
@@ -133,7 +135,7 @@ int	findLowest(const GradeType array, int size)
 
 	for (int i = 0; i < size; i++) {
 
-		if (array[i] < min) {
+		if (array[i] > min) {
 			min = array[i];
 		}
 
